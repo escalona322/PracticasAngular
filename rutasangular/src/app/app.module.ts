@@ -12,6 +12,9 @@ import { Error404Component } from './components/error404/error404.component';
 import { NumerodobleComponent } from './components/numerodoble/numerodoble.component';
 import { MenuCollatzComponent } from './components/menu-collatz/menu-collatz.component';
 import { CollatzComponent } from './components/collatz/collatz.component';
+import { ListaproductosComponent } from './components/listaproductos/listaproductos.component';
+import { CocheComponent } from './components/coche/coche.component';
+import { ConcesionarioComponent } from './components/concesionario/concesionario.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,10 @@ import { CollatzComponent } from './components/collatz/collatz.component';
     Error404Component,
     NumerodobleComponent,
     MenuCollatzComponent,
-    CollatzComponent
+    CollatzComponent,
+    ListaproductosComponent,
+    CocheComponent,
+    ConcesionarioComponent
   ],
   imports: [
     BrowserModule, routing

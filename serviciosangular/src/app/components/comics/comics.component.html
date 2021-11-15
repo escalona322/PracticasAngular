@@ -1,0 +1,39 @@
+<div>
+    <form #comicForm="ngForm">
+        <label for="">Titulo:</label>
+        <input type="text"
+        name="cajatitulo"
+        #cajatitulo
+        > <br/>
+        <label for="">Imagen:</label>
+        <input type="text"
+        name="cajaimagen"
+        #cajaimagen
+        > <br/>
+        <label for="">Descripcion</label>
+        <input type="text"
+        name="cajadescripcion"
+        #cajadescripcion
+        >
+        <br/>
+        <button (click)="nuevoComic()">Nuevo Comic</button>
+        <button>Modificar Comic</button>
+    </form>
+    <hr/>
+    <div>
+        <h1>Favorito</h1>
+        <h1> {{favorito.titulo}} </h1>
+        <img src="{{favorito.imagen}}" height="340px" width="290px">
+        <h3> {{favorito.descripcion}} </h3>
+    </div>
+    <hr/>
+    <div *ngFor="let comic of comics">
+        <app-comic [comic]="comic"
+        (eliminarComic)="eliminarComic($event)"
+        (modificarComic)="modificarComic($event)"
+        (seleccionarFavorito)="seleccionarFavorito($event)"
+        >
+
+        </app-comic>
+    </div>
+</div>

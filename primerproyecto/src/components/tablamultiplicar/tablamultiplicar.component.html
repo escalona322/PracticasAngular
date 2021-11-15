@@ -1,0 +1,31 @@
+<div>
+    <h1>
+        Tabla Multiplicar
+    </h1>
+
+    <form #userForm="ngForm" (ngSubmit)="pintarTabla()">
+        <label for="">Numero 1:</label>
+        <input type="text" name="nombre"
+        #cajanum1="ngModel"
+        [(ngModel)]="num1">
+        
+        <br/>
+        <button>
+            Pintar tabla
+        </button>
+        <div *ngIf="tablaMultiplicar.length > 0">
+            <table border="1px">
+                <thead>
+                    <th>Operacion</th>
+                    <th>Resultado</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let res of tablaMultiplicar; let i = index">
+                        <td> {{num1}} * {{i}} </td>
+                        <td> {{res}} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>

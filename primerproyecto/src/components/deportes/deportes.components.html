@@ -9,8 +9,14 @@
     Estilos con ngStyle
 </h2>
 <ul>
+    <!-- [style.color]="num % 2 == 0 ? 'green': 'red'" -->
+    <!-- [class.estilopar]= "num % 2 == 0"
+    [class.estiloimpar]= "num % 2 == 1" -->
     <li *ngFor="let num of numeros"
-    [style.color]="num % 2 == 0 ? 'green': 'red'">
+    [ngClass]="{
+        estilopar: num % 2 == 0,
+        estiloimpar: num % 2 != 0  
+    }">
         {{num}}
     </li>
 </ul>

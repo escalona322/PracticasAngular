@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 @Component ({
     selector: "app-deportes",
     templateUrl: "./deportes.components.html",
+    styleUrls: ["./deportes.component.css"]
 })
 
 export class Deportes {

@@ -7,6 +7,15 @@ import { ComicsComponent } from './components/comics/comics.component';
 import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FormsModule } from '@angular/forms';
+import { ComicsinyeccionComponent } from './components/comicsinyeccion/comicsinyeccion.component';
+import { ComicsService } from './services/comic.service';
+import { HttpClientModule } from '@angular/common/http';
+import { PersonasapiComponent } from './components/personasapi/personasapi.component';
+import { ServicePersonas } from './services/servicepersonas';
+import { ServiceEmpleados } from './services/empleado.service';
+import { EmpleadossalarioComponent } from './components/empleadossalario/empleadossalario.component';
+import { EmpleadosoficioComponent } from './components/empleadosoficio/empleadosoficio.component';
+import { ServiceEmpleados2 } from './services/empleado2.service';
 
 @NgModule({
   declarations: [
@@ -14,12 +23,21 @@ import { FormsModule } from '@angular/forms';
     ComicComponent,
     ComicsComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    ComicsinyeccionComponent,
+    PersonasapiComponent,
+    EmpleadossalarioComponent,
+    EmpleadosoficioComponent
   ],
   imports: [
-    BrowserModule, routing, FormsModule
+    BrowserModule, FormsModule, routing, HttpClientModule
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, 
+    ComicsService, 
+    ServicePersonas,
+    ServiceEmpleados,
+    ServiceEmpleados2
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

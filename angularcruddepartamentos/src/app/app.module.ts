@@ -11,6 +11,7 @@ import { InsertardepartamentoComponent } from './components/insertardepartamento
 import { EditardepartamentoComponent } from './components/editardepartamento/editardepartamento.component';
 import { EmpleadosdeptComponent } from './components/empleadosdept/empleadosdept.component';
 import { ServiceEmpleados } from 'src/services/empleados.service';
+import { IncrementarsalarioComponent } from './components/incrementarsalario/incrementarsalario.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ServiceEmpleados } from 'src/services/empleados.service';
     InsertardepartamentoComponent,
     EditardepartamentoComponent,
     EmpleadosdeptComponent,
+    IncrementarsalarioComponent,
 
   ],
   imports: [

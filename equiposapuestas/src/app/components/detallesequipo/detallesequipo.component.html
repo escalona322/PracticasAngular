@@ -1,0 +1,17 @@
+<div *ngIf="!equipo">
+    <h1>Cargando...</h1>
+</div>
+<div *ngIf="equipo">
+    <h1> {{equipo.nombre}} </h1>
+    <img src={{equipo.imagen}} alt="" height="370px" width="320px">
+    <h2> Champions: {{equipo.champions}} </h2>
+    <p>
+        {{equipo.descripcion}}
+    </p>
+    <a class="btn btn-success"
+    [routerLink]="['/jugadoresequipo', equipo.idEquipo]"
+    >Jugadores</a>
+    <a class="btn btn-info"
+    [routerLink]="['/home']"
+    >Volver</a>
+</div>

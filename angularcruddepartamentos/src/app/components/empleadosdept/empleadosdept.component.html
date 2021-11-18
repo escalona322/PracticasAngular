@@ -18,6 +18,11 @@
                 <td>{{empl.oficio}}</td>
                 <td>{{empl.salario}}</td>
                 <td>{{empl.departamento}}</td>
+                <td>
+                    <a [routerLink]="['/incrementarsalario', empl.idEmpleado]">
+                        Incr. Salario
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>

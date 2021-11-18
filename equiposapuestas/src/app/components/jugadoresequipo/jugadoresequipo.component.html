@@ -1,0 +1,33 @@
+<div *ngIf="!jugadores">
+   <h1>Cargando...</h1>
+</div>
+<div>
+    <h1>Jugadores equipo</h1>
+    <a class="btn btn-danger"
+    [routerLink]="['/equipo', id]"
+    >
+    Volver
+    </a> 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Detalles</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="jugadores">
+            <tr *ngFor="let jug of jugadores">
+                <td> {{jug.nombre}} </td>
+                <td>
+                    <img src={{jug.imagen}} alt="" height="200px" width="175px"/>
+                </td>
+                <td> <a class="btn btn-danger"
+                    [routerLink]="['/detallesjugador', jug.idJugador]"
+                    >
+                    Detalles
+                </a> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

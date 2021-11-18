@@ -1,0 +1,16 @@
+<div *ngIf="!jugador">
+    <h1>Cargando...</h1>
+</div>
+<div *ngIf="jugador">
+    <h1> {{jugador.nombre}} </h1>
+    <img src={{jugador.imagen}}>
+    <h2> {{jugador.posicion}} </h2>
+    <h3> Fecha de nacimiento: {{jugador.fechaNacimiento}} </h3>
+    <h4> Pais: {{jugador.pais}} </h4>
+    <a
+    [routerLink]="['/jugadoresequipo', jugador.idEquipo]"
+    class="btn btn-info"
+    >
+        Volver
+    </a>
+</div>

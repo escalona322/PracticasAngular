@@ -1,0 +1,11 @@
+
+<div *ngIf="empleados" class="container">
+    <h1>Maestro detalle empleado routing</h1>
+    <ul class="list">
+        <li class="list-group"
+        *ngFor="let emp of empleados">
+          <span>{{emp.apellido}}</span> 
+            <a [routerLink]="['/detalleempleado', emp.idEmpleado]">Empleados</a>
+        </li>
+    </ul>
+</div>

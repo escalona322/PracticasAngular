@@ -1,0 +1,20 @@
+<div>
+    <form #departamentoForm="ngForm">
+        <label for="">Nombre:</label>
+        <input type="text"
+        name="cajanombre"
+        #cajanombre
+        > <br/>
+        <label for="">Localidad: </label>
+        <input type="text"
+        name="cajalocalidad"
+        #cajalocalidad
+        >
+        <br/>
+        <button class="btn btn-info" 
+        (click)="updateDepartamento()"
+        >
+            Editar
+        </button>
+    </form>
+</div>

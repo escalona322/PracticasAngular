@@ -1,0 +1,24 @@
+<div>
+    <h1>
+        Lista empleados
+    </h1>
+    <a [routerLink]="['/home']" class="btn btn-warning">Volver</a>
+    <table class="table">
+        <thead>
+            <th>idEmpleado</th>
+           <th>Apellido</th>
+            <th>Oficio</th>
+           <th>Salario</th>
+            <th>Director</th>
+        </thead>
+        <tbody *ngIf="empleados">
+            <tr *ngFor="let empl of empleados">
+                <td>{{empl.idEmpleado}}</td>
+                <td>{{empl.apellido}}</td>
+                <td>{{empl.oficio}}</td>
+                <td>{{empl.salario}}</td>
+                <td>{{empl.departamento}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

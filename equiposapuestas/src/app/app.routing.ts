@@ -6,6 +6,7 @@ import { JugadoresequipoComponent } from "./components/jugadoresequipo/jugadores
 import { DetallejugadorComponent } from "./components/detallejugador/detallejugador.component";
 import { ApuestasComponent } from "./components/apuestas/apuestas.component";
 import { EliminarapuestaComponent } from "./components/eliminarapuesta/eliminarapuesta.component";
+import { InsertarapuestaComponent } from "./components/insertarapuesta/insertarapuesta.component";
 
 const appRoutes: Routes = [
     {path: "home", component: HomeComponent},
@@ -14,6 +15,9 @@ const appRoutes: Routes = [
     {path: "detallesjugador/:idjugador", component: DetallejugadorComponent},
     {path: "apuestas", component: ApuestasComponent},
     {path: "eliminarapuesta/:idapuesta", component: EliminarapuestaComponent},
+    {path: "insertarapuesta", component: InsertarapuestaComponent},
+
+
 ]
 
 export const appRoutingProviders: any[] = [];

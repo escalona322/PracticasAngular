@@ -4,6 +4,5 @@ export class Apuesta {
         public usuario: string,
         public resultado: string,
         public fecha: string,
-
     ){}
 }

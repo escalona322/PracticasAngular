@@ -1,1 +1,14 @@
-<p>eliminarapuesta works!</p>
+<div>
+    <h1>Quieres eliminar la apuesta {{idapuesta}} </h1>
+
+    <button class="btn btn-success"
+    (click)="eliminarApuesta()"
+    >
+        Confirmar
+    </button>
+    <a class="btn btn-danger"
+    [routerLink]="['/apuestas']"
+    >
+        Volver
+    </a>
+</div>

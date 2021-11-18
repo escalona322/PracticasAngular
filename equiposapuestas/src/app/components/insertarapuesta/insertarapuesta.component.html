@@ -1,1 +1,19 @@
-<p>insertarapuesta works!</p>
+<form #insertarForm="ngForm">
+    <label>Usuario:</label>
+    <input type="text" name="cajausuario"
+    #cajausuario class="form-control"/>
+    <label>Real Madrid:</label>
+    <input type="number" name="cajarm"
+    #cajarm class="form-control"/>
+    <label>Atletico del Madrid:</label>
+    <input type="number" name="cajaam"
+    #cajaam class="form-control"/>
+    <label>Fecha:</label>
+    <input type="text" name="cajafecha"
+    #cajafecha class="form-control"/>
+
+    <button class="btn btn-success"
+    (click)="introducirApuesta()">
+        Insertar Apuesta
+    </button>
+</form>

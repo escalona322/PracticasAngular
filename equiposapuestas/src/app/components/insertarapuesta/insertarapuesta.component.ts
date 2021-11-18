@@ -12,7 +12,7 @@ export class InsertarapuestaComponent implements OnInit {
   public apuesta!: Apuesta;
   @ViewChild("cajausuario") cajausuario: ElementRef; 
   @ViewChild("cajarm") cajarm: ElementRef; 
-  @ViewChild("cajam") cajaam: ElementRef; 
+  @ViewChild("cajaam") cajaam: ElementRef; 
   @ViewChild("cajafecha") cajafecha: ElementRef; 
   constructor(private _service: ServiceApuestas,
     private _router: Router,
